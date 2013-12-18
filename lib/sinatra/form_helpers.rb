@@ -79,6 +79,12 @@ module Sinatra
                           :value => value, :id => css_id('button', value)}.merge(options)
     end
 
+    # Form submit tag, with prefix icon.
+    def submit(value='Submit', icon='', options={})
+      tag :button, "<i class='#{icon}'></i> #{value}", {:name => "submit", :type => "submit",
+                                              :id => css_id('button', value)}.merge(options)
+    end
+
     # Form reset tag.  Does anyone use these anymore?
     def reset(value='Reset', options={})
       single_tag :input, {:name => "reset", :type => "reset",
