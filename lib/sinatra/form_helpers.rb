@@ -80,8 +80,14 @@ module Sinatra
     end
 
     # Form submit tag, with prefix icon.
-    def submit(value='Submit', icon='', options={})
+    def submit_with_pre_icon(value='Submit', icon='', options={})
       tag :button, "<i class='#{icon}'></i> #{value}", {:name => "submit", :type => "submit",
+                                              :id => css_id('button', value)}.merge(options)
+    end
+    
+    # Form submit tag, with postfix icon.
+    def submit_with_post_icon(value='Submit', icon='', options={})
+      tag :button, "#{value} <i class='#{icon}'></i>", {:name => "submit", :type => "submit",
                                               :id => css_id('button', value)}.merge(options)
     end
 
