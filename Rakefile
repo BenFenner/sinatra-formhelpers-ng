@@ -14,7 +14,7 @@ begin
     gem.email = "fenfam@sc.rr.com"
     gem.homepage = "https://github.com/BenFenner/sinatra-formhelpers-ng"
     gem.authors = ["twilson63", "Nate Wiger", "Cymen Vig", "Ben Fenner"]
-    gem.add_development_dependency "bacon", ">= 0"
+    gem.add_development_dependency "bacon", ">= 0", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   
